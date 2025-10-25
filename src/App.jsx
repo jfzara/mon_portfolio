@@ -1,12 +1,12 @@
 
 import './App.css'
-import Navbar from "./components/Navbar.jsx"
+import Layout from "./components/Layout.jsx"
 function App() {
  
 
   return (
     <>
-      <Navbar/>
+      <Layout/>
     </>
   )
 }
