@@ -4,6 +4,8 @@ function Layout() {
   return (
     <>
     <Navbar/>
+    <Hero/>
+    <Footer/>
     </>
   )
 }
