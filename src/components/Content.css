@@ -1,0 +1,33 @@
+.content {
+  flex: 1;
+  margin-left: 0;
+  padding: 3rem 1.5rem; /* mobile-first padding suffisant */
+  box-sizing: border-box;
+  background-color: #f5f5f5; /* garde fond clair pour contenu */
+  
+}
+
+.content h2 {
+  font-size: 1.5rem;
+  color: #3B82F6; /* accent bleu */
+  margin-bottom: 1rem;
+}
+
+.content p, .content li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1E1E1E;
+}
+
+.content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .content {
+    margin-left: 20vw; /* espace pour la bannière gauche */
+    padding: 4rem 3rem; /* plus d'air autour du contenu */
+  }
+}

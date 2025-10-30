@@ -1,0 +1,14 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #2A2A2A;
+  color: #E7E5E4;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Le main doit prendre l'espace restant */
+main {
+  flex: 1;
+}

@@ -2,8 +2,9 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #1E1E1E;
-  z-index: 100;
+  background: #EDFCD1; 
+ 
+  color: black
 }
 
 .skip-link {
@@ -31,7 +32,7 @@ header {
 }
 
 .navbar-nav a {
-  color: #E7E5E4;
+
   font-weight: 500;
   text-decoration: none;
   transition: color 0.2s;
