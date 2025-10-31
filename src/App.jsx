@@ -1,24 +1,20 @@
-import "./App.css"
-import { createGlobalStyle } from "styled-components";
+import React, { useState } from "react";
 import Layout from "./components/Layout";
+import BentoGrid from "./components/BentoGrid";
 
-const GlobalStyle = createGlobalStyle`
-  body {
- font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #c23d3d; /* gris clair doux pour le contenu */
-  color: #1E1E1E; /* texte anthracite */
-  }
-`;
+export default function App(){
+  // toggles pour afficher/masquer sections secondaires
+  const [showProjects, setShowProjects] = useState(false);
+  const [showSkills, setShowSkills] = useState(false);
 
-function App() {
   return (
-    <>
-      <GlobalStyle />
-      <Layout />
-    </>
-  )
+    <Layout>
+      <BentoGrid
+        showProjects={showProjects}
+        setShowProjects={setShowProjects}
+        showSkills={showSkills}
+        setShowSkills={setShowSkills}
+      />
+    </Layout>
+  );
 }
-
-export default App;

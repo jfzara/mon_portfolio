@@ -1,28 +1,29 @@
 import React from "react";
+import styled from "styled-components";
 import Navbar from "./Navbar";
-import BannerLeft from "./BannerLeft";
-import Content from "./Content";
 import Footer from "./Footer";
-import { PageGrid, BannerArea, MainArea, FooterArea, NavArea } from "./Layout.styles";
+import { theme } from "../theme";
 
-export default function Layout() {
+const Page = styled.div`
+  min-height:100vh;
+  background: ${theme.colors.bg};
+  display:flex;
+  flex-direction:column;
+`;
+
+const Main = styled.main`
+  flex:1;
+  width:100%;
+  display:block;
+  padding:1rem;
+`;
+
+export default function Layout({ children }){
   return (
-    <PageGrid>
-      <BannerArea>
-        <BannerLeft />
-      </BannerArea>
-
-      <NavArea>
-        <Navbar />
-      </NavArea>
-
-      <MainArea id="main-content">
-        <Content />
-      </MainArea>
-
-      <FooterArea>
-        <Footer />
-      </FooterArea>
-    </PageGrid>
+    <Page>
+      <Navbar />
+      <Main className="container">{children}</Main>
+      <Footer />
+    </Page>
   );
 }
