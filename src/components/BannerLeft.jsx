@@ -1,10 +1,11 @@
 import React from "react";
 import "./BannerLeft.css";
+import photoTechnicien from "../assets/photo-technicien.jpeg";
 
 export default function BannerLeft() {
   return (
     <aside className="banner-left">
-     
+     <img src={photoTechnicien} alt="photo de Jean Fabrice ZARA" />
       <div className="banner-info">
         <h1>Jean Fabrice ZARA</h1>
         <h2>Développeur Web React & Node.js</h2>
